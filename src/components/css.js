@@ -1,4 +1,4 @@
-import { checkNamedParams, checkHasChildren } from 'scpwiki-handlebars-util';
+import { checkComponentNamedParams, checkComponentHasChildren } from 'scpwiki-handlebars-util';
 
 const componentName = 'css';
 
@@ -14,8 +14,8 @@ const componentSpec = {
  * @returns {string}
  */
 export default (options) => {
-    checkHasChildren(componentName, options);
-    checkNamedParams(componentName, componentSpec, options.hash);
+    checkComponentHasChildren(componentName, options);
+    checkComponentNamedParams(componentName, componentSpec, options.hash);
 
     return `\
 [[module CSS show="${options.hash.show || false}" disable="${options.hash.disable || false}"]]
