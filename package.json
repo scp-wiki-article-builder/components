@@ -1,0 +1,24 @@
+{
+  "name": "scpwiki-handlebars-components",
+  "version": "1.0.0",
+  "description": "SCP Wiki (and Wikidot) components as Handlebars Helpers",
+  "author": "422404",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "scripts": {},
+  "keywords": [
+    "handlebars",
+    "scp-foundation",
+    "wikidot",
+    "scpwiki"
+  ],
+  "devDependencies": {
+    "@types/node": "^16.11.4",
+    "handlebars": "^4.7.7"
+  },
+  "dependencies": {
+    "scpwiki-handlebars-util": "file:../scpwiki-handlebars-util"
+  }
+}
