@@ -19,6 +19,7 @@
     "handlebars": "^4.7.7"
   },
   "dependencies": {
+    "colors": "^1.4.0",
     "scpwiki-handlebars-util": "file:../scpwiki-handlebars-util"
   }
 }
