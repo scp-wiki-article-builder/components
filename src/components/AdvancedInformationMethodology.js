@@ -1,6 +1,6 @@
 import { checkComponentNamedParams } from 'scpwiki-handlebars-util';
 
-const componentName = 'advancedInformationMethodology';
+const componentName = 'AdvancedInformationMethodology';
 
 const componentSpecBoth = {
     blocks: { type: 'string', optional: true },
@@ -40,7 +40,7 @@ const componentSpecBottom = {
 
 /**
  * SCP-Wiki Advanced Information Methodology component,
- * @module advancedInformationMethodology
+ * @module AdvancedInformationMethodology
  * @param {Handlebars.HelperOptions} options
  * @returns {string}
  */

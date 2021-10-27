@@ -2,7 +2,7 @@ const componentName = 'infoMore';
 
 /**
  * SCP-Wiki Info Module component ('more' block).
- * @module infoMore
+ * @module InfoMore
  * @param {Handlebars.HelperOptions} options
  * @returns {string}
  */

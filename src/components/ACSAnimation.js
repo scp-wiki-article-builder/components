@@ -1,6 +1,6 @@
 import { checkComponentNamedParams } from 'scpwiki-handlebars-util';
 
-const componentName = 'acsAnimation';
+const componentName = 'ACSAnimation';
 
 const componentSpec = {
     timeScale: { type: 'number', optional: true },
@@ -10,7 +10,7 @@ const componentSpec = {
 
 /**
  * SCP-Wiki ACS Animation component.
- * @module acsAnimation
+ * @module ACSAnimation
  * @param {Handlebars.HelperOptions} options
  * @returns {string}
  */

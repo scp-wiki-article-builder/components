@@ -1,23 +1,23 @@
-import rate from './src/components/rate.js';
-import css from './src/components/css.js';
-import anomalyClassBar from './src/components/anomalyClassBar.js';
-import footerNav from './src/components/footerNav.js';
+import Rate from './src/components/Rate.js';
+import CSS from './src/components/CSS.js';
+import AnomalyClassBar from './src/components/AnomalyClassBar.js';
+import FooterNav from './src/components/FooterNav.js';
+import ACSAnimation from './src/components/ACSAnimation.js';
+import Info from './src/components/Info.js';
+import InfoMore from './src/components/InfoMore.js';
+import AdvancedInformationMethodology from './src/components/AdvancedInformationMethodology.js';
 import localized from './src/components/localized.js'
-import acsAnimation from './src/components/acsAnimation.js';
-import info from './src/components/info.js';
-import infoMore from './src/components/infoMore.js';
-import advancedInformationMethodology from './src/components/advancedInformationMethodology.js';
 import todo from './src/components/todo.js';
 
 export {
-    rate,
-    css,
-    anomalyClassBar,
-    footerNav,
+    Rate,
+    CSS,
+    AnomalyClassBar,
+    FooterNav,
+    ACSAnimation,
+    Info,
+    InfoMore,
+    AdvancedInformationMethodology,
     localized,
-    acsAnimation,
-    info,
-    infoMore,
-    advancedInformationMethodology,
     todo,
 };

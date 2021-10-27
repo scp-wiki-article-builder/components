@@ -1,10 +1,10 @@
 import { checkComponentParam } from 'scpwiki-handlebars-util';
 
-const componentName = 'footerNav';
+const componentName = 'FooterNav';
 
 /**
  * SCP-Wiki footer navigation links.
- * @module footerNav
+ * @module FooterNav
  * @param {number} itemNumber
  * @returns {string}
  */

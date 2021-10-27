@@ -2,7 +2,7 @@ import Handlebars from 'handlebars';
 
 import { checkComponentNamedParams, checkComponentHasChildren } from 'scpwiki-handlebars-util';
 
-const componentName = 'info';
+const componentName = 'Info';
 
 const componentSpec = {
     standalone: { type: 'boolean', optional: true }
@@ -10,7 +10,7 @@ const componentSpec = {
 
 /**
  * SCP-Wiki Info Module component.
- * @module info
+ * @module Info
  * @param {Handlebars.HelperOptions} options
  * @returns {string}
  */

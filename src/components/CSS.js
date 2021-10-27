@@ -1,6 +1,6 @@
 import { checkComponentNamedParams, checkComponentHasChildren } from 'scpwiki-handlebars-util';
 
-const componentName = 'css';
+const componentName = 'CSS';
 
 const componentSpec = {
     show: { type: 'boolean', optional: true },

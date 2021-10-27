@@ -1,6 +1,6 @@
 import { checkComponentNamedParams } from 'scpwiki-handlebars-util';
 
-const componentName = 'anomalyClassBar';
+const componentName = 'AnomalyClassBar';
 
 const componentSpec = {
     itemNumber: 'number',
@@ -14,7 +14,7 @@ const componentSpec = {
 
 /**
  * SCP-Wiki anomaly-class-bar module
- * @module anomalyClassBar
+ * @module AnomalyClassBar
  * @param {Handlebars.HelperOptions} options
  * @returns {string}
  */
