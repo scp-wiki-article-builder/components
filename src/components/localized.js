@@ -7,10 +7,11 @@ const componentName = 'localized';
  * given the value of the 'locale' property.
  * @module localized
  * @param {string} partialBaseName
+ * @param {Handlebars.HelperOptions} options
  * @returns {string} Full name of the partial to execute
  */
-export default function (partialBaseName) {
+export default function (partialBaseName, options) {
     checkComponentParam(componentName, 'string', partialBaseName);
 
-    return `${partialBaseName}.${this.locale}`;
+    return `${partialBaseName}.${options.data.config.locale}`;
 }
