@@ -13,7 +13,7 @@ const componentSpec = {
  * @param {Handlebars.HelperOptions} options
  * @returns {string}
  */
-export default (options) => {
+export default function (options) {
     checkComponentHasChildren(componentName, options);
     checkComponentNamedParams(componentName, componentSpec, options.hash);
 
@@ -21,4 +21,4 @@ export default (options) => {
 [[module CSS show="${options.hash.show || false}" disable="${options.hash.disable || false}"]]
 ${options.fn(this)}\
 [[/module]]`;
-};
+}

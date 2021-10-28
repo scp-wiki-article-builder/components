@@ -3,4 +3,6 @@
  * @module Rate
  * @returns {string}
  */
-export default () => '[[module Rate]]';
+export default function () {
+    return '[[module Rate]]';
+}

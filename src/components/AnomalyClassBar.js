@@ -18,7 +18,7 @@ const componentSpec = {
  * @param {Handlebars.HelperOptions} options
  * @returns {string}
  */
-export default (options) => {
+export default function (options) {
     checkComponentNamedParams(componentName, componentSpec, options.hash);
 
     return `\
@@ -32,4 +32,4 @@ ${options.hash.secondaryIcon
 |disruption-class= ${options.hash.disruptionClass}
 |risk-class= ${options.hash.riskClass}
 ]]`;
-};
+}

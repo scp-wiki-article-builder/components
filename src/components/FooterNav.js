@@ -8,7 +8,7 @@ const componentName = 'FooterNav';
  * @param {number} itemNumber
  * @returns {string}
  */
-export default (itemNumber) => {
+export default function (itemNumber) {
     checkComponentParam(componentName, 'number', itemNumber);
 
     return `\
@@ -17,4 +17,4 @@ export default (itemNumber) => {
 << [[[SCP-${itemNumber - 1}]]] | SCP-${itemNumber} | [[[SCP-${itemNumber + 1}]]] >>
 [[/=]]
 [[/div]]`;
-};
+}
