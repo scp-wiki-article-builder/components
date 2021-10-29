@@ -3,7 +3,7 @@ import {
     ComponentTypeCheckError,
     ValidationException,
     ComponentException,
-} from 'scpwiki-handlebars-util';
+} from '@scp-wiki-article-builder/util';
 
 const componentName = 'i18n';
 

@@ -1,18 +1,18 @@
 {
-  "name": "scpwiki-handlebars-components",
+  "name": "@scp-wiki-article-builder/components",
   "version": "1.0.0",
-  "description": "SCP Wiki (and Wikidot) components as Handlebars Helpers",
+  "description": "Components to include in templates for scp-wiki-article-builder.",
   "author": "422404",
   "license": "CC BY-SA 3.0",
   "type": "module",
   "main": "./index.js",
   "exports": "./index.js",
-  "scripts": {},
   "keywords": [
     "handlebars",
     "scp-foundation",
     "wikidot",
-    "scpwiki"
+    "scp-wiki",
+    "scp"
   ],
   "devDependencies": {
     "@types/node": "^16.11.4",
@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "colors": "^1.4.0",
-    "scpwiki-handlebars-util": "file:../scpwiki-handlebars-util"
+    "@scp-wiki-article-builder/util": "^1.0.0"
   }
 }

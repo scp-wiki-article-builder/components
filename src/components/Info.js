@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 
-import { checkComponentNamedParams, checkComponentHasChildren } from 'scpwiki-handlebars-util';
+import { checkComponentNamedParams, checkComponentHasChildren } from '@scp-wiki-article-builder/util';
 
 const componentName = 'Info';
 

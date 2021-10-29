@@ -1,4 +1,4 @@
-import { checkComponentNamedParams, checkComponentHasChildren } from 'scpwiki-handlebars-util';
+import { checkComponentNamedParams, checkComponentHasChildren } from '@scp-wiki-article-builder/util';
 
 const componentName = 'CSS';
 

@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 
-import { checkComponentHasChildren } from 'scpwiki-handlebars-util';
+import { checkComponentHasChildren } from '@scp-wiki-article-builder/util';
 
 const componentName = 'CurrentDateProvider';
 

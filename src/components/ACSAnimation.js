@@ -1,4 +1,4 @@
-import { checkComponentNamedParams } from 'scpwiki-handlebars-util';
+import { checkComponentNamedParams } from '@scp-wiki-article-builder/util';
 
 const componentName = 'ACSAnimation';
 
