@@ -1,6 +1,6 @@
 {
   "name": "@scp-wiki-article-builder/components",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Components to include in templates for scp-wiki-article-builder.",
   "author": "422404",
   "license": "CC BY-SA 3.0",
@@ -19,7 +19,8 @@
     "handlebars": "^4.7.7"
   },
   "dependencies": {
-    "colors": "^1.4.0",
-    "@scp-wiki-article-builder/util": "^1.0.0"
+    "@scp-wiki-article-builder/engine": "^1.1.0",
+    "@scp-wiki-article-builder/util": "^1.0.0",
+    "colors": "^1.4.0"
   }
 }
