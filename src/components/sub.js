@@ -7,7 +7,8 @@ import {
 
 import {
     checkComponentParam,
-    RuntimeException
+    RuntimeException,
+    restoreExceptionPrototype,
 } from '@scp-wiki-article-builder/util';
 
 const componentName = 'sub';
@@ -31,7 +32,7 @@ export default function (subProjectName, options) {
 
     const result = buildSubProject(subProjectConfigPath);
     if (result.error) {
-        throw result.error;
+        throw restoreExceptionPrototype(result.error);
     }
 
     return result.text;
