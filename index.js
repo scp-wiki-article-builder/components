@@ -10,6 +10,7 @@ import CurrentDateProvider from './src/components/CurrentDateProvider.js';
 import i18n from './src/components/i18n.js'
 import todo from './src/components/todo.js';
 import sub from './src/components/sub.js';
+import image from './src/components/image.js';
 
 export {
     Rate,
@@ -24,4 +25,5 @@ export {
     i18n,
     todo,
     sub,
+    image,
 };

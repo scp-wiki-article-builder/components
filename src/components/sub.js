@@ -1,15 +1,12 @@
-import { URL } from 'url';
-import {
-    receiveMessageOnPort,
-    Worker,
-    MessageChannel
-} from 'worker_threads';
-
 import {
     checkComponentParam,
     RuntimeException,
-    restoreExceptionPrototype,
 } from '@scp-wiki-article-builder/util';
+
+import {
+    buildWithNoErrorHandling,
+    loadBuildConfig
+} from '@scp-wiki-article-builder/engine';
 
 const componentName = 'sub';
 
@@ -18,8 +15,9 @@ const componentName = 'sub';
  * @module sub
  * @param {string} subProjectName
  * @param {Handlebars.HelperOptions} options
+ * @returns {Promise<string>}
  */
-export default function (subProjectName, options) {
+export default async function (subProjectName, options) {
     checkComponentParam(componentName, 'string', subProjectName);
 
     const subProjectConfigPath = options.data.config.subProjects[subProjectName];
@@ -30,45 +28,30 @@ export default function (subProjectName, options) {
         );
     }
 
-    const result = buildSubProject(subProjectConfigPath);
-    if (result.error) {
-        throw restoreExceptionPrototype(result.error);
-    }
-
-    return result.text;
+    return await buildSubProject(
+        subProjectConfigPath,
+        options.data.config,
+        options.data.services
+    );
 }
 
 /**
  * Builds a sub-project in a worker and returns the generated text.
  * @param {string} configPath
- * @returns {{ text: string | null, error: any }}
+ * @param {any} parentBuildOptions
+ * @param {any} services
+ * @returns {Promise<string>}
  */
-const buildSubProject = (configPath) => {
-    let result = null;
-    // We create a message channel to be able to use receiveMessageOnPort().
-    const { port1, port2 } = new MessageChannel();
-    // This array will be used for signaling between the worker and the main thread.
-    const signal = new Int32Array(new SharedArrayBuffer(4));
-    signal[0] = 0;
-
-    // We create and start the worker thread.
-    const worker = new Worker(new URL('../workers/subWorker.js', import.meta.url), {
-        workerData: {
-            configPath
-        }
-    });
-
-    try {
-        // We pass it the port to reach us back and the shared array.
-        worker.postMessage({ port: port1, signal }, [ port1 ])
-
-        // We wait for it to compile the sub-project and send us the result.
-        Atomics.wait(signal, 0, 0);
-        result = receiveMessageOnPort(port2).message;
-    } finally {
-        // We shutdown the worker thread.
-        worker.unref();
-    }
-
-    return result;
+const buildSubProject = async (configPath, parentBuildOptions, services) => {
+    const buildOptions = await loadBuildConfig(configPath);
+    const { wikiName, pageName } = parentBuildOptions;
+    return await buildWithNoErrorHandling(
+        buildOptions,
+        configPath,
+        {
+            wikiName,
+            pageName,
+        },
+        services
+    );
 };
